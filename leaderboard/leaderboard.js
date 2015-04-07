@@ -20,6 +20,9 @@ if (Meteor.isClient) {
     },
     'click .dec': function () {
       Players.update(Session.get("selectedPlayer"), {$inc: {score: -5}});
+    },
+    'click .delete': function () {
+      Players.remove(Session.get("selectedPlayer"));
     }
   });
 
