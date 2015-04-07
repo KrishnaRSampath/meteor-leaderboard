@@ -120,6 +120,31 @@ body {
 
 .details .inc {
   border-radius: 3em;
+  border: blue 1px solid;
+  background: transparent;
+  color: blue;
+  cursor: pointer;
+  float: right;
+  font-family: 'Source Sans Pro' ,'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 10px 20px;
+  transition: all 200ms ease-in;
+}
+
+.inc:hover {
+  background: blue;
+  color: #fff;
+}
+
+.inc:active {
+  box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+}
+
+.details .dec {
+  border-radius: 3em;
   border: #eb5f3a 1px solid;
   background: transparent;
   color: #eb5f3a;
@@ -130,20 +155,45 @@ body {
   line-height: 1;
   margin: 0;
   outline: none;
-  padding: 10px 30px;
+  padding: 10px 20px;
   transition: all 200ms ease-in;
 }
 
-.inc:hover {
+.dec:hover {
   background: #eb5f3a;
   color: #fff;
 }
 
-.inc:active {
+.dec:active {
   box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
 }
 
-.details .new {
+.details .delete {
+  border-radius: 3em;
+  border: gray 1px solid;
+  background: transparent;
+  color: gray;
+  cursor: pointer;
+  float: right;
+  font-family: 'Source Sans Pro' ,'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 10px 20px;
+  transition: all 200ms ease-in;
+}
+
+.delete:hover {
+  background: gray;
+  color: #fff;
+}
+
+.delete:active {
+  box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
+}
+
+.new {
   border-radius: 3em;
   border: #eb5f3a 1px solid;
   background: transparent;

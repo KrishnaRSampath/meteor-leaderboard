@@ -18,14 +18,21 @@ if (Meteor.isClient) {
     'click .inc': function () {
       Players.update(Session.get("selectedPlayer"), {$inc: {score: 5}});
     },
-    'click .new': function () {
-      alert("Button clicked!");
+    'click .dec': function () {
+      Players.update(Session.get("selectedPlayer"), {$inc: {score: -5}});
+    }
+  });
+
+  Template.addNewPlayer.events({
+    'click .new': function (event, template) {
+      var name = template.find('#playerName').value;
       Players.insert({
-          name: "Krishna Sampath",
+          name: name,
           score: Math.floor(Random.fraction() * 10) * 5
       });
     }
   });
+
 
   Template.player.helpers({
     selected: function () {
@@ -36,17 +43,6 @@ if (Meteor.isClient) {
   Template.player.events({
     'click': function () {
       Session.set("selectedPlayer", this._id);
-    }
-  });
-
-  Template.player.events({
-    'click': function () {
-      Session.set("selectedPlayer", this._id);
-
-    Players.insert({
-          name: name,
-          score: Math.floor(Random.fraction() * 10) * 5
-        }); 
     }
   });
 
